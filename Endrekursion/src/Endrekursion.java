@@ -1,29 +1,52 @@
-
 public class Endrekursion {
-	 
 	 
 	    public static void main(String[ ] args){
 	    	long sumIt = summeIterativ(11);
-	    	long sumRek = summeRekursiv(11);
-	    	long sumEnd = summeEndrekursiv(0, 11);
-	    	long pw = powfakRekursiv(2, 3);
-	    	long pwEnd = powfakEndRekursiv(1, 2, 3);
-	    	long fk = rekursivFakultät(5);
-	    	long fkEnd = EndrekursivFakultät(1, 5);
+	    	System.out.println("Summenfunktion Iterativ von 5 = "+ sumIt);
+	    	System.out.println("--------------------");
 	    	
-	        System.out.println("Summenfunktion Iterativ von 5 = "+ sumIt);
-	        System.out.println("Summenfunktion Rekursiv von 5 = "+ sumRek);
-	    	System.out.println(sumEnd);
-	    	System.out.println(".............");
-	    	System.out.println(pw);
-	    	System.out.println(pwEnd);
-	    	System.out.println(".............");
-	    	System.out.println(fk);
-	    	System.out.println(fkEnd);
+	    	System.out.println("Summenfunktion Rekursiv für Zahl 11: ");
+	    	long startTime = System.nanoTime();
+	    	long smrk = summeRekursiv(11);
+	    	long stopTime = System.nanoTime();
+	    	System.out.println(smrk);
+	    	System.out.println("Benötigte Zeit = " + (stopTime - startTime) + " Nanosekunden");
+	    	System.out.println("--------------------");
+	    	System.out.println("Summenfunktion Endrekursiv für Zahl 11: ");
+	    	long startTime1 = System.nanoTime();
+	    	long smerk = summeEndrekursiv(0, 11);	    	
+	    	long stopTime1 = System.nanoTime();
+	    	System.out.println(smerk);
+	    	System.out.println("Benötigte Zeit = " + (stopTime1 - startTime1) + " Nanosekunden");
+	    	System.out.println("--------------------");
+	    	System.out.println("Hochfunktion Rekursiv für Basis 2 Hoch 3: ");
+	    	long startTime2 = System.nanoTime();
+	    	long pwrk = powfakRekursiv(2, 3);
+	    	long stopTime2 = System.nanoTime();
+	    	System.out.println(pwrk);
+	    	System.out.println("Benötigte Zeit = " + (stopTime2 - startTime2) + " Nanosekunden");
+	    	System.out.println("--------------------");
+	    	System.out.println("Hochfunktion Endekursiv für Basis 2 Hoch 3: ");
+	    	long startTime3 = System.nanoTime();
+	    	long pwerk = powfakEndRekursiv(1, 2, 3);
+	    	long stopTime3 = System.nanoTime();
+	    	System.out.println(pwerk);
+	    	System.out.println("Benötigte Zeit = " + (stopTime3 - startTime3) + " Nanosekunden");
+	    	System.out.println("--------------------");
+	    	System.out.println("Fakultät Rekursiv mit Zahl 5: ");
+	    	long startTime4 = System.nanoTime();
+	    	long fkrk = rekursivFakultät(5);
+	    	long stopTime4 = System.nanoTime();
+	    	System.out.println(fkrk);
+	    	System.out.println("Benötigte Zeit = " + (stopTime4 - startTime4) + " Nanosekunden");
+	    	System.out.println("--------------------");
+	    	System.out.println("Fakultät Endrekursiv mit Zahl 5: ");
+	    	long startTime5 = System.nanoTime();
+	    	long fkerk = EndrekursivFakultät(1, 5);
+	    	long stopTime5 = System.nanoTime();
+	    	System.out.println(fkerk);
+	    	System.out.println("Benötigte Zeit = " + (stopTime5 - startTime5) + " Nanosekunden");
 	    }
-	    
-	    // Iterativ sowie Rekursion
-	    
 	    static long summeRekursiv(int n)
 	    {
 	        
